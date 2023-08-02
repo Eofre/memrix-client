@@ -2,6 +2,7 @@ import { FC } from "react";
 import classes from "./HeaderBase.module.scss";
 import { Link } from "react-router-dom";
 import { Container } from "../Container";
+import { VscAccount } from "react-icons/vsc";
 import { Logo } from "../Logo";
 
 interface HeaderBaseProps {}
@@ -15,7 +16,9 @@ const HeaderBase: FC<HeaderBaseProps> = () => {
           <div className={classes.right}>
             <Link to="/modules">Модули</Link>
           </div>
-          <a href="#">Профиль</a>
+          <a href="#">
+            <VscAccount fontSize={27} />
+          </a>
         </div>
       </Container>
     </header>
