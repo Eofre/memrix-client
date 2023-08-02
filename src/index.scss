@@ -1,0 +1,46 @@
+@import "./root.scss";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-text;
+    background-color: $color-background-black;
+}
+
+ul {
+    list-style: none;
+}
+  
+li,
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+  
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+  
+input {
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    outline: none;
+}

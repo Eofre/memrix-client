@@ -1,0 +1,15 @@
+@import "../../../root.scss";
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    
+    input {
+        outline: 2px solid $color-primary;
+        padding: 10px;
+        border-radius: 7px;
+    }
+    
+}

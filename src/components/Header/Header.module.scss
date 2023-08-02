@@ -1,0 +1,22 @@
+@import "../../root.scss";
+
+.header {
+    padding: 15px 0px;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .right {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+
+        .reg {
+            background: $color-primary;
+            padding: 10px;
+            border-radius: 7px;
+            color: $color-secondary
+        }
+    }
+}
