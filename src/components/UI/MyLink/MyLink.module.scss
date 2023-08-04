@@ -1,0 +1,12 @@
+@import "../../../root.scss";
+
+.myLink {
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.secondary {
+    background-color: $background-link-color;
+    color: $text-link-color;
+}

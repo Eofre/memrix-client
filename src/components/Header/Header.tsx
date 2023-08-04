@@ -13,10 +13,10 @@ export const Header: FC<HeaderProps> = () => {
         <div className={classes.wrapper}>
           <Logo />
           <div className={classes.right}>
-            <Link to="/modules">Вход</Link>
-            <a className={classes.reg} href="#">
+            <Link to="/login">Вход</Link>
+            <Link className={classes.reg} to="/modules">
               Регистрация
-            </a>
+            </Link>
           </div>
         </div>
       </Container>

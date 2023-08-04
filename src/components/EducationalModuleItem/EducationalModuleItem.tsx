@@ -11,7 +11,7 @@ const EducationalModuleItem: FC<EducationalModuleItemProps> = ({ item }) => {
   const numberOfTerms = item.words.length;
   const navigate = useNavigate();
 
-  const handlerClick = () => navigate(`/${item.id}`);
+  const handlerClick = () => navigate(`/modules/${item.id}`);
 
   return (
     <li className={classes.educationalModuleItem} onClick={handlerClick}>
