@@ -10,3 +10,8 @@ export interface IWord {
     definition: string,
     transcription: string
 }
+
+export interface IGameModeItem {
+    name: string,
+    href: string
+}

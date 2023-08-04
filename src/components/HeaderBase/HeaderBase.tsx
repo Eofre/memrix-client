@@ -3,7 +3,9 @@ import classes from "./HeaderBase.module.scss";
 import { Link } from "react-router-dom";
 import { Container } from "../Container";
 import { VscAccount } from "react-icons/vsc";
+import account from "../../assets/images/account.jpg";
 import { Logo } from "../Logo";
+import { RiAccountPinCircleFill } from "react-icons/ri";
 
 interface HeaderBaseProps {}
 
@@ -14,10 +16,13 @@ const HeaderBase: FC<HeaderBaseProps> = () => {
         <div className={classes.wrapper}>
           <Logo />
           <div className={classes.right}>
-            <Link to="/modules">Модули</Link>
+            <a href="#">Библиотека</a>
           </div>
+
           <a href="#">
-            <VscAccount fontSize={27} />
+            {/* <VscAccount fontSize={27} /> */}
+            {/* <img className={classes.account} src={account} alt="" /> */}
+            <RiAccountPinCircleFill fontSize={37} />
           </a>
         </div>
       </Container>

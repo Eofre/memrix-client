@@ -1,6 +1,25 @@
 
-// color
-$color-text: #242424;
-$color-primary: #1c1c1c;
-$color-secondary: #1b1b1b;
-$color-background-black: rgba(247, 248, 251, 1);
+// Цвета для состояний
+$success-color: #5BB55B; // Зеленый (успех, подтверждение)
+$error-color: #FF5B5B; // Красный (ошибки, предупреждения)
+
+// Цвет фона
+$background-accent-color: #1b1b1b;
+$background-default-color: rgba(37, 36, 39, 1);  
+$background-link-color: rgba(222, 190, 73, 0.1);
+
+$control-background-primary-hover:rgb(46, 45, 48); 
+$control-background-secondary-hover:#1b1b1bab;
+$control-background-disabled:#1b1b1b5d;
+// Цвет текста
+$text-primary-color: rgb(239, 239, 239);
+$text-secondary-color: rgba(255, 255, 255, 0.7);
+$text-link-color:rgba(222, 190, 73, 1);
+
+// Шрифты
+$main-font: 'Arial', sans-serif; // Основной шрифт
+$heading-font: 'Helvetica', sans-serif; // Шрифт для заголовков
+
+// Размеры
+$main-font-size: 16px; // Размер основного текста
+$heading-font-size: 24px; // Размер шрифта для заголовков

@@ -2,8 +2,9 @@ import { FC } from "react";
 import classes from "./FlipCard.module.scss";
 import { IWord } from "../../types/types";
 import ReactCardFlip from "react-card-flip";
-import { LeftArrowButton } from "../UI/LeftArrowButton";
-import { RightArrowButton } from "../UI/RightArrowButton";
+import { IconButton } from "../UI/IconButton";
+import { BsArrowLeftCircle, BsArrowRightCircle } from "react-icons/bs";
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 
 interface FlipCardProps {
   word: IWord;
@@ -44,14 +45,14 @@ export const FlipCard: FC<FlipCardProps> = ({
         </div>
         <div className={classes.btns}>
           {isDisabledButtonPrevious ? (
-            <LeftArrowButton disabled />
+            <IconButton icon={<BiLeftArrow />} disabled />
           ) : (
-            <LeftArrowButton onClick={handlerClickPrevious} />
+            <IconButton icon={<BiLeftArrow />} onClick={handlerClickPrevious} />
           )}
           {isDisabledButtonNext ? (
-            <RightArrowButton disabled />
+            <IconButton icon={<BiRightArrow />} disabled />
           ) : (
-            <RightArrowButton onClick={handlerClickNext} />
+            <IconButton icon={<BiRightArrow />} onClick={handlerClickNext} />
           )}
         </div>
       </div>
@@ -63,14 +64,16 @@ export const FlipCard: FC<FlipCardProps> = ({
         <div className={classes.word}>{word.definition}</div>
         <div className={classes.btns}>
           {isDisabledButtonPrevious ? (
-            <LeftArrowButton disabled />
+            <IconButton disabled>
+              <BsArrowLeftCircle />
+            </IconButton>
           ) : (
-            <LeftArrowButton onClick={handlerClickPrevious} />
+            <IconButton onClick={handlerClickPrevious}></IconButton>
           )}
           {isDisabledButtonNext ? (
-            <RightArrowButton disabled />
+            <IconButton disabled></IconButton>
           ) : (
-            <RightArrowButton onClick={handlerClickNext} />
+            <IconButton onClick={handlerClickNext}></IconButton>
           )}
         </div>
       </div>

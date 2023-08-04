@@ -9,6 +9,8 @@ import { Button } from "../../components/UI/Button";
 import { IWord } from "../../types/types";
 import classes from "./EducationalBlockPage.module.scss";
 import educationalBlocks from "../../data/educationalBlocks";
+import GameModePanel from "../../components/GameModePanel/GameModePanel";
+import gameModes from "../../data/gameModes";
 
 interface EducationalBlockPageProps {}
 
@@ -73,9 +75,9 @@ export const EducationalBlockPage: FC<EducationalBlockPageProps> = () => {
           <>
             <div className={classes.top}>
               <h2>{educationalBlock.name}</h2>
-              <button>
+              {/* <button>
                 <FaEllipsisV />
-              </button>
+              </button> */}
             </div>
             {/* <div>
               <Link
@@ -85,6 +87,7 @@ export const EducationalBlockPage: FC<EducationalBlockPageProps> = () => {
                 Режимы игры
               </Link>
             </div> */}
+            {/* <GameModePanel gameModes={gameModes} /> */}
             <div style={{ height: "370px" }}>
               <AnimatePresence>
                 {showCard && (
