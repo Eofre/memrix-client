@@ -64,16 +64,14 @@ export const FlipCard: FC<FlipCardProps> = ({
         <div className={classes.word}>{word.definition}</div>
         <div className={classes.btns}>
           {isDisabledButtonPrevious ? (
-            <IconButton disabled>
-              <BsArrowLeftCircle />
-            </IconButton>
+            <IconButton icon={<BiLeftArrow />} disabled />
           ) : (
-            <IconButton onClick={handlerClickPrevious}></IconButton>
+            <IconButton icon={<BiLeftArrow />} onClick={handlerClickPrevious} />
           )}
           {isDisabledButtonNext ? (
-            <IconButton disabled></IconButton>
+            <IconButton icon={<BiRightArrow />} disabled />
           ) : (
-            <IconButton onClick={handlerClickNext}></IconButton>
+            <IconButton icon={<BiRightArrow />} onClick={handlerClickNext} />
           )}
         </div>
       </div>
