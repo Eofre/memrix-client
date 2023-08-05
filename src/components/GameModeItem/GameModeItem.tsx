@@ -1,16 +1,19 @@
 import { FC } from "react";
 import classes from "./GameModeItem.module.scss";
 import { IGameModeItem } from "../../types/types";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 interface GameModeItemProps {
   gameMode: IGameModeItem;
 }
 
 const GameModeItem: FC<GameModeItemProps> = ({ gameMode }) => {
+  const params = useParams();
+  const path = `/modules/${params.id}/games/${gameMode.namePath}`;
   return (
-    <Link to={gameMode.href} className={classes.gameModeItem}>
-      {gameMode.name}
+    <Link to={path} className={classes.gameModeItem}>
+      <h3 className={classes.name}>{gameMode.name}</h3>
+      <p className={classes.description}>{gameMode.description}</p>
     </Link>
   );
 };

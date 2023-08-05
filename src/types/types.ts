@@ -13,5 +13,6 @@ export interface IWord {
 
 export interface IGameModeItem {
     name: string,
-    href: string
+    namePath: string,
+    description: string,
 }

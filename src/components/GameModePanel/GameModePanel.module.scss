@@ -3,8 +3,8 @@
 .gameModePanel {
     ul{
         display: flex;
-        align-items: center;
-        gap: 10px
+        flex-direction: column;
+        gap: 17px;
     }
    
 }

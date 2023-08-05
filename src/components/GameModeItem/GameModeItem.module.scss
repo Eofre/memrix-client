@@ -1,14 +1,24 @@
 @import "../../root.scss";
 
 .gameModeItem {
-    padding: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     border-radius: 7px;
-    outline: 2px solid #00000005;
-    box-shadow: 0px 0px 8px #0000002a;
-    background-color: rgb(255, 255, 255);
+    background-color: $background-default-color;
     transition: all 0.3s;
+    max-width:100%;
+    .name{
+        font-size: 21px;
+        font-weight: 500;
+    }
+    .description {
+        color: $text-secondary-color;
+        font-size: 16px;
+    }
 
     &:hover{
-        box-shadow: 0px 0px 10px #00000054;
+        background-color: $control-background-primary-hover;
     }
 }

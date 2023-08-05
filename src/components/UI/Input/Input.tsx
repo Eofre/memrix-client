@@ -2,7 +2,7 @@ import { FC } from "react";
 import classes from "./Input.module.scss";
 
 interface InputProps {
-  label: string;
+  label?: string;
 }
 
 export const Input: FC<InputProps> = ({ label }) => (

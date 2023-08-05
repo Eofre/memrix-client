@@ -7,9 +7,9 @@
 
     
     input {
-        outline: 2px solid $color-primary;
+        background-color: $background-default-color;
         padding: 10px;
-        border-radius: 7px;
+        border-radius: 5px;
     }
     
 }

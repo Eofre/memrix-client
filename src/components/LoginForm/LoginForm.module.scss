@@ -1,0 +1,15 @@
+@import "../../root.scss";
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    // max-width: 500px;
+    max-width: 500px;
+
+    .inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+}

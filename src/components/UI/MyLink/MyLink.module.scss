@@ -6,7 +6,19 @@
 
 }
 
+.primary {
+    color: $text-secondary-color;
+    transition: all 0.3s;
+    &:hover {
+        color: $text-primary-color;
+    }
+}
+
 .secondary {
     background-color: $background-link-color;
     color: $text-link-color;
+    transition: all 0.3s;
+    &:hover {
+        background-color: $background-link-color-hover;
+    }
 }

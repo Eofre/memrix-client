@@ -1,0 +1,12 @@
+@import "../../root.scss";
+
+.searchBar {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 30px;
+    padding: 10px 20px;
+    background-color: $background-default-color;
+    font-size: 16px;
+
+}

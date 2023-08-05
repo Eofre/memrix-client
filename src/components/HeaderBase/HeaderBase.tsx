@@ -6,6 +6,7 @@ import { VscAccount } from "react-icons/vsc";
 import account from "../../assets/images/account.jpg";
 import { Logo } from "../Logo";
 import { RiAccountPinCircleFill } from "react-icons/ri";
+import { SearchBar } from "../SearchBar";
 
 interface HeaderBaseProps {}
 
@@ -16,9 +17,9 @@ const HeaderBase: FC<HeaderBaseProps> = () => {
         <div className={classes.wrapper}>
           <Logo />
           <div className={classes.right}>
+            <SearchBar />
             <a href="#">Библиотека</a>
           </div>
-
           <a href="#">
             {/* <VscAccount fontSize={27} /> */}
             {/* <img className={classes.account} src={account} alt="" /> */}

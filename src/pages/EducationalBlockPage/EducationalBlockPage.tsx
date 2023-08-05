@@ -11,6 +11,7 @@ import classes from "./EducationalBlockPage.module.scss";
 import educationalBlocks from "../../data/educationalBlocks";
 import GameModePanel from "../../components/GameModePanel/GameModePanel";
 import gameModes from "../../data/gameModes";
+import { MyLink } from "../../components/UI/MyLink";
 
 interface EducationalBlockPageProps {}
 
@@ -75,6 +76,11 @@ export const EducationalBlockPage: FC<EducationalBlockPageProps> = () => {
           <>
             <div className={classes.top}>
               <h2>{educationalBlock.name}</h2>
+              <div>
+                <MyLink variant="primary" href="/modules/1/games">
+                  Режимы игры
+                </MyLink>
+              </div>
               {/* <button>
                 <FaEllipsisV />
               </button> */}
