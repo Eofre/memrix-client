@@ -9,7 +9,7 @@ interface GameModeItemProps {
 
 const GameModeItem: FC<GameModeItemProps> = ({ gameMode }) => {
   const params = useParams();
-  const path = `/modules/${params.id}/games/${gameMode.namePath}`;
+  const path = `/games/${gameMode.namePath}/1`;
   return (
     <Link to={path} className={classes.gameModeItem}>
       <h3 className={classes.name}>{gameMode.name}</h3>

@@ -1,13 +1,12 @@
 import { FC } from "react";
 import { Outlet } from "react-router";
 import { Container } from "../Container";
-import { Header } from "../Header";
-import { PageTransition } from "../PageTransition";
+import { HeaderGame } from "../HeaderGame";
 
-export const Layout: FC = () => {
+export const LayoutGame: FC = () => {
   return (
     <>
-      <Header />
+      <HeaderGame />
       <main>
         <Container maxWidth={1200}>
           <Outlet />

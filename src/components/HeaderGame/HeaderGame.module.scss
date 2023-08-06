@@ -1,0 +1,11 @@
+@import "../../root.scss";
+
+.headerGame {
+    padding: 7px 0px;
+    background-color: $background-default-color;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
