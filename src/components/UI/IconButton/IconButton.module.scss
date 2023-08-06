@@ -1,7 +1,7 @@
 @import "../../../root.scss";
 
 .iconButton {
-    background-color: $background-accent-color;
+    
     padding: 10px;
     width: 100%;
     border-radius: 5px;
@@ -19,4 +19,11 @@
         background-color: $control-background-disabled;
         cursor:default;
     }
+}
+
+.primary {
+    background-color: $background-accent-color;
+}
+.secondary {
+    background-color: $background-default-color;
 }

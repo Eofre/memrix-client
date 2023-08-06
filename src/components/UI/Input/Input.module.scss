@@ -1,15 +1,15 @@
 @import "../../../root.scss";
 
 .input {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: 100%;
+}
 
-    
-    input {
-        background-color: $background-default-color;
-        padding: 10px;
-        border-radius: 5px;
-    }
-    
+.primary {
+    background-color: $background-accent-color;
+}
+
+.secondary {
+    background-color: $background-default-color;
 }

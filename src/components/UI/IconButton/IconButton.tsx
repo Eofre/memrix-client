@@ -3,11 +3,17 @@ import classes from "./IconButton.module.scss";
 
 interface IconButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   icon: ReactNode;
+  variant?: "primary" | "secondary";
 }
 
-export const IconButton: FC<IconButtonProps> = ({ icon, ...rest }) => {
+export const IconButton: FC<IconButtonProps> = ({
+  icon,
+  variant = "primary",
+  ...rest
+}) => {
+  const className: string = `${classes.iconButton} ${classes[`${variant}`]}`;
   return (
-    <button className={classes.iconButton} {...rest}>
+    <button className={className} {...rest}>
       {icon}
     </button>
   );

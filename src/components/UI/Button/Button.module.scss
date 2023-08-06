@@ -4,5 +4,16 @@
     background-color: $background-default-color;
     padding: 10px;
     border-radius: 5px;
+    transition: all 0.3s;
    
+}
+
+.primary {
+    background-color: $background-accent-color;
+    &:hover {
+        background-color: $control-background-primary-hover;
+    }
+}
+.secondary {
+    background-color: $background-default-color;
 }
