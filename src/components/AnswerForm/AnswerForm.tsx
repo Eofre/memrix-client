@@ -1,10 +1,9 @@
 import { ChangeEvent, FC } from "react";
-import classes from "./GameForm.module.scss";
+import classes from "./AnswerForm.module.scss";
 import { Input } from "../UI/Input";
-import { IWord } from "../../types/types";
 import { Button } from "../UI/Button";
 
-interface GameFormProps {
+interface AnswerFormProps {
   answer: string;
   onClickSendAnswer: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -12,7 +11,7 @@ interface GameFormProps {
   onChangeAnswer: (event: ChangeEvent<HTMLInputElement>) => void;
 }
 
-export const GameForm: FC<GameFormProps> = ({
+export const AnswerForm: FC<AnswerFormProps> = ({
   answer,
   onClickSendAnswer,
   onChangeAnswer,
@@ -21,19 +20,7 @@ export const GameForm: FC<GameFormProps> = ({
     event.preventDefault();
   };
   return (
-    <form className={classes.gameForm}>
-      {/* <CountdownCircleTimer
-        key={step}
-        size={130}
-        isPlaying
-        duration={word.term.length}
-        colors={["#debe49", "#FF5B5B"]}
-        colorsTime={[7, 0]}
-        onComplete={handlerTimer}
-      >
-        {({ remainingTime }) => <div>{remainingTime}</div>}
-      </CountdownCircleTimer> */}
-
+    <form className={classes.form}>
       <Input
         placeholder="Ответ..."
         onChange={onChangeAnswer}
