@@ -5,7 +5,6 @@ import { IWord } from "../../types/types";
 import { Button } from "../UI/Button";
 
 interface GameFormProps {
-  word: IWord;
   answer: string;
   onClickSendAnswer: (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
@@ -14,7 +13,6 @@ interface GameFormProps {
 }
 
 export const GameForm: FC<GameFormProps> = ({
-  word,
   answer,
   onClickSendAnswer,
   onChangeAnswer,
@@ -24,7 +22,6 @@ export const GameForm: FC<GameFormProps> = ({
   };
   return (
     <form className={classes.gameForm}>
-      <h3 className={classes.word}>{word.definition}</h3>
       {/* <CountdownCircleTimer
         key={step}
         size={130}
@@ -36,15 +33,14 @@ export const GameForm: FC<GameFormProps> = ({
       >
         {({ remainingTime }) => <div>{remainingTime}</div>}
       </CountdownCircleTimer> */}
-      <div className={classes.answer}>
-        <Input
-          placeholder="Ответ..."
-          onChange={onChangeAnswer}
-          value={answer}
-          onPaste={handlePaste}
-        />
-        <Button onClick={onClickSendAnswer}>Ответить</Button>
-      </div>
+
+      <Input
+        placeholder="Ответ..."
+        onChange={onChangeAnswer}
+        value={answer}
+        onPaste={handlePaste}
+      />
+      <Button onClick={onClickSendAnswer}>Ответить</Button>
     </form>
   );
 };
