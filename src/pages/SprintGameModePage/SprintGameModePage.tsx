@@ -4,21 +4,28 @@ import { useParams } from "react-router-dom";
 import educationalBlocks from "../../data/educationalBlocks";
 import { GameForm } from "../../components/GameForm";
 import { ResultGameSprint } from "../../components/ResultGameSprint";
+import { shuffleArrayWithoutRepeats } from "../../utils/utils";
+import { IAnswerSprint } from "../../types/types";
+import { WarnBeforeUnload } from "../../components/WarnBeforeUnload";
 
 interface SprintGameModePageProps {}
 
 export const SprintGameModePage: FC<SprintGameModePageProps> = () => {
   const params = useParams();
   const educationalBlock = educationalBlocks[0];
-  const words = educationalBlock.words;
+  const [words, setWords] = useState(
+    shuffleArrayWithoutRepeats(educationalBlock.words)
+  );
   const [step, setStep] = useState(0);
   const word = words[step];
   const [answer, setAnswer] = useState("");
   const [isRightAnswer, setIsRightAnswer] = useState(true);
   const [isFinish, setIsFinish] = useState(false);
+  const [userAnswers, setUserAnswers] = useState<IAnswerSprint[]>([]);
 
   const handlerTimer = () => {
     setIsRightAnswer(false);
+    setUserAnswers([...userAnswers, { word, isRight: false }]);
   };
 
   const isMatchingTerm =
@@ -55,7 +62,7 @@ export const SprintGameModePage: FC<SprintGameModePageProps> = () => {
     <section className={classes.sprintGameModePage}>
       <div className={classes.wrapper}>
         {isFinish ? (
-          <ResultGameSprint />
+          <ResultGameSprint answers={userAnswers} />
         ) : (
           <GameForm
             step={step}
@@ -68,6 +75,7 @@ export const SprintGameModePage: FC<SprintGameModePageProps> = () => {
           />
         )}
       </div>
+      {/* <WarnBeforeUnload /> */}
     </section>
   );
 };

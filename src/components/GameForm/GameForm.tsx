@@ -26,6 +26,9 @@ export const GameForm: FC<GameFormProps> = ({
   handlerSubmit,
   handlerAnswerChange,
 }) => {
+  const handlePaste = (event: React.ClipboardEvent<HTMLInputElement>) => {
+    event.preventDefault();
+  };
   return (
     <form className={classes.gameForm}>
       {!isRightAnswer ? (
@@ -57,6 +60,7 @@ export const GameForm: FC<GameFormProps> = ({
           placeholder="Ответ..."
           onChange={handlerAnswerChange}
           value={answer}
+          onPaste={handlePaste}
         />
         <Button onClick={handlerSubmit}>Ответить</Button>
       </div>

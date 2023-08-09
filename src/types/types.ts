@@ -16,3 +16,8 @@ export interface IGameModeItem {
     namePath: string,
     description: string,
 }
+
+export interface IAnswerSprint {
+    word: IWord;
+    isRight: boolean
+}
