@@ -19,5 +19,6 @@ export interface IGameModeItem {
 
 export interface IAnswerSprint {
     word: IWord;
+    answer: string,
     isRight: boolean
 }
